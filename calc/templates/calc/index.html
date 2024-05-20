@@ -1,0 +1,25 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Kalkulator</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'calc/styles.css' %}">
+</head>
+<body>
+    <div class="container"></div>
+        <h1>Prosty kalkulator</h1>
+        <form action="/calculate/" method="post">
+            {% csrf_token %}
+            <input type="text" name="num1" placeholder="Pierwsza liczba">
+            <input type="text" name="num2" placeholder="Druga liczba">
+            <select name="operation">
+                <option value="add">Dodawanie</option>
+                <option value="substract">Odejmowanie</option>
+                <option value="multiply">Mnożenie</option>
+                <option value="divide">Dzielenie</option>
+            </select>
+            <button type="submit">Oblicz</button>
+        </form>
+    </div>
+</body>
+</html>

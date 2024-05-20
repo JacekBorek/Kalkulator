@@ -1,0 +1,16 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Wynik działania</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'calc/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Wynik działania</h1>
+        <div class="result">{{ result }}</div>
+        <a class="back-link" href="/">Powrót</a>
+
+    </div>
+</body>
+</html>
